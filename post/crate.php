@@ -11,3 +11,23 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tambah Post</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<h2>Tambah Postingan</h2>
+
+<form method="POST">
+    <input type="text" name="judul" placeholder="Judul" required>
+    <textarea name="konten" placeholder="Konten" required></textarea>
+    <button type="submit" name="submit">Simpan</button>
+</form>
+
+<a href="../index.php">Kembali</a>
+
+</body>
+</html>
