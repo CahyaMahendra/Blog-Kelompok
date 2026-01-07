@@ -12,18 +12,29 @@ $data = mysqli_query($conn, "SELECT * FROM posts ORDER BY tanggal DESC");
 </head>
 <body>
 
-<h2>Blog Pribadi</h2>
-<a href="post/crate.php">+ Tambah Post</a>
+<header>
+    <div class="container header-flex">
+        <div class="logo">Blog Pribadi</div>
+        <nav class="nav">
+            <a href="index.php">Home</a>
+            <a href="post/crate.php" class="btn btn-primary">+ Post</a>
+        </nav>
+    </div>
+</header>
 
+<main class="container">
 <?php while ($row = mysqli_fetch_assoc($data)) : ?>
     <div class="post">
         <h3><?= $row['judul']; ?></h3>
         <small><?= $row['tanggal']; ?></small>
-        <p><?= substr($row['konten'], 0, 100); ?>...</p>
-        <a href="post/edit.php?id=<?= $row['id']; ?>">Edit</a> |
-        <a href="post/delete.php?id=<?= $row['id']; ?>" onclick="return confirmDelete()">Hapus</a>
+        <p><?= substr($row['konten'], 0, 120); ?>...</p>
+
+        <a class="btn btn-outline" href="detail.php?id=<?= $row['id']; ?>">Detail</a>
+        <a class="btn btn-outline" href="post/edit.php?id=<?= $row['id']; ?>">Edit</a>
+        <a class="btn btn-danger" href="post/delete.php?id=<?= $row['id']; ?>" onclick="return confirmDelete()">Hapus</a>
     </div>
 <?php endwhile; ?>
 
-</body>
-</html>
+<footer>
+    © <?= date('Y'); ?> Blog Pribadi
+</footer>
