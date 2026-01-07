@@ -34,6 +34,7 @@ $data = mysqli_query($conn, "SELECT * FROM posts ORDER BY tanggal DESC");
         <a class="btn btn-danger" href="post/delete.php?id=<?= $row['id']; ?>" onclick="return confirmDelete()">Hapus</a>
     </div>
 <?php endwhile; ?>
+</main>
 
 <footer>
     © <?= date('Y'); ?> Blog Pribadi
