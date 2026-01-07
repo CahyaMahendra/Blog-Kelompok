@@ -49,6 +49,9 @@ Blog-Kelompok/
 │ └── js/
 │ └── script.js # Script JS untuk aksi hapus
 │
+├── database/
+│ └── Blog_DB.sql
+│
 ├── index.php # Halaman utama menampilkan semua post
 ├── detail.php # Halaman detail post
 └── README.md # File dokumentasi ini
