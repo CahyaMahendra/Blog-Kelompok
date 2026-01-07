@@ -24,3 +24,29 @@ $post = mysqli_fetch_assoc($data);
         </nav>
     </div>
 </header>
+
+<main class="container">
+    <div class="post detail-post">
+        <h1><?= $post['judul']; ?></h1>
+        <small class="post-date"><?= $post['tanggal']; ?></small>
+
+        <div class="post-content">
+            <?= nl2br($post['konten']); ?>
+        </div>
+
+        <div class="post-actions">
+            <a href="index.php" class="btn btn-outline">← Kembali</a>
+            <a href="post/edit.php?id=<?= $post['id']; ?>" class="btn btn-outline">Edit</a>
+            <a href="post/delete.php?id=<?= $post['id']; ?>" 
+               class="btn btn-danger"
+               onclick="return confirmDelete()">Hapus</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    © <?= date('Y'); ?> Blog Pribadi
+</footer>
+
+</body>
+</html>
