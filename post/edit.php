@@ -9,7 +9,7 @@ $post = mysqli_fetch_assoc($data);
 <html>
 <head>
     <title>Edit Post</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/asset/css/style.css">
 </head>
 <body>
 
@@ -38,3 +38,4 @@ $post = mysqli_fetch_assoc($data);
 
 </body>
 </html>
+
